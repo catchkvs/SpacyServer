@@ -1,0 +1,54 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: spacy-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spacy-server
+  template:
+    metadata:
+      labels:
+        app: spacy-server
+    spec:
+      containers:
+        - name: spacy-server
+          image: gcr.io/interviewparrot/spacy-server:RELEASE_TAG
+          ports:
+          - containerPort: 1050
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 1050
+            periodSeconds: 30
+            timeoutSeconds: 10
+            successThreshold: 1
+            failureThreshold: 10
+          volumeMounts:
+          - name: iparrot-admin-credentials
+            mountPath: /secrets/spacy-server/credentials
+            readOnly: true
+          env:
+            - name: GOOGLE_APPLICATION_CREDENTIALS
+              value: /secrets/spacy-server/credentials/interviewparrot-admin-59fbc1d0e021.json
+      volumes:
+        - name: iparrot-admin-credentials
+          secret:
+            secretName: iparrot-admin-credentials
+
+---
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: spacy-server
+  labels:
+    app: spacy-server
+spec:
+  type: NodePort
+  selector:
+    run: spacy-server
+  ports:
+  - port: 5000
+    targetPort: 1050

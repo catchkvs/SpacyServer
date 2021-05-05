@@ -1,0 +1,45 @@
+#blis<0.5.0,>=0.4.0
+certifi==2019.9.11
+chardet==3.0.4
+Click==7.0
+cymem==2.0.2
+spacy>=2.2.0,<3.0.0
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.2.0/en_core_web_sm-2.2.0.tar.gz#egg=en_core_web_sm
+#https://github.com/explosion/spacy-models/releases/download/en_core_web_md-2.2.0/en_core_web_md-2.2.0.tar.gz#egg=en_core_web_md
+#https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-2.2.0/en_core_web_lg-2.2.0.tar.gz#egg=en_core_web_lg
+#https://github.com/explosion/spacy-models/releases/download/en_vectors_web_lg-2.1.0/en_vectors_web_lg-2.1.0.tar.gz#egg=en_vectors_web_lg
+#https://github.com/explosion/spacy-models/releases/download/en_trf_bertbaseuncased_lg-2.2.0/en_trf_bertbaseuncased_lg-2.2.0.tar.gz#egg=en_trf_bertbaseuncased_lg
+#https://github.com/explosion/spacy-models/releases/download/en_trf_robertabase_lg-2.2.0/en_trf_robertabase_lg-2.2.0.tar.gz#egg=en_trf_robertabase_lg
+#https://github.com/explosion/spacy-models/releases/download/en_trf_distilbertbaseuncased_lg-2.2.0/en_trf_distilbertbaseuncased_lg-2.2.0.tar.gz#egg=en_trf_distilbertbaseuncased_lg
+#https://github.com/explosion/spacy-models/releases/download/en_trf_xlnetbasecased_lg-2.2.0/en_trf_xlnetbasecased_lg-2.2.0.tar.gz#egg=en_trf_xlnetbasecased_lg
+# for infersent
+#torch
+#nltk
+#matplotlib
+
+# for universalsentenceencoder
+#tensorflow-hub
+
+Flask==1.1.1
+gevent
+#idna==2.8
+#itsdangerous==1.1.0
+#Jinja2==2.10.1
+#MarkupSafe==1.1.1
+#numpy==1.17.2
+#murmurhash==0.28.0
+#plac==0.9.6
+#preshed<3.1.0,>=3.0.2
+#requests==2.22.0
+#srsly==0.1.0
+#thinc<7.2.0,>=7.1.1
+#tqdm==4.36.1
+#urllib3==1.25.6
+#wasabi==0.4.0
+#Werkzeug==0.16.0
+textacy
+word2number # converts words to numbers https://pypi.org/project/word2number/
+twilio
+hashids==0.8.4
+google-cloud-firestore
+#spacy-transformers
